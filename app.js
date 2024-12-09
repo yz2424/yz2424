@@ -5,8 +5,8 @@
 
             if (colour === "黒" && number === 0) {
                 result = "凶";
-            } else if (colour === "黒" && number === 1) {
-                result = 末凶";
+            } else if (colour === "黒" && number === 1凶) {
+                result = "末凶";
             } else if (colour === "黒" && number === 2) {
                 result = "末小吉";
             } else if (colour === "白" && number === 0) {
