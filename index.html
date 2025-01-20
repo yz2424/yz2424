@@ -1,23 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日の運勢</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        #fortune {
+            font-size: 24px;
+            margin: 20px 0;
+            height: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
-    <div class="container">
-        <br>
-        <label for="colour-select">好きな色を選んでください:</label>
-        <select id="colour-select">
-            <option value="黒">黒</option>
-            <option value="白">白</option>
-            <option value="赤">赤</option>
-            <option value="ピンク">ピンク</option>
-            <option value="青">青</option>
-            <option value="オレンジ">オレンジ</option>
-            <option value="黄色">黄色</option>
-            <option value="紫">紫</option>
-            <option value="水色">水色</option>
-        </select>
-        <br>
-        <label for="number-input">好きな数字を選んでください（0,1,2）※半角数値で入力:</label>
-        <input type="number" id="number-input">
-        <br>
-        <button onclick="checkFortune()">運勢をチェック</button>
-        <p id="result-output"></p>
-    </div>
-    <script src
+
+    <h1>今日の運勢</h1>
+    <div id="fortune">ここに運勢が表示されます。</div>
+    <button id="getFortune">運勢を見る</button>
+
+    <script>
+        const fortunes = [
+            "大吉: 今日は最高の日です！",
+            "中吉: よいことが待っています。",
+            "小吉: 少しの運があるでしょう。",
+            "凶: 注意が必要な日かも。",
+            "大凶: あまり無理をしない方が良いです。"
+        ];
+
+        document.getElementById("getFortune").addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * fortunes.length);
+            document.getElementById("fortune").innerText = fortunes[randomIndex];
+        });
+    </script>
+
+</body>
+</html>
