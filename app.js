@@ -3,7 +3,8 @@
             var number = parseInt(document.getElementById('number-input').value, 10);
             var result = "凶"; // デフォルトの値
 
-           else if (colour === "黒" && number === 0) {
+            }
+            else if (colour === "黒" && number === 0) {
                 result = "凶";
             } else if (colour === "青" && number === 1) {
                 result = "末凶";
